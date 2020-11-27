@@ -1,4 +1,6 @@
 const https = require('https');
+const Utils = require('./Utils');
+const main = require('./../index');
 
 module.exports = class CryptoManager {
     async checkServerStatus() {
@@ -16,7 +18,7 @@ module.exports = class CryptoManager {
             return false;
         })
     }
-    
+
     fetchRates(resForInit, responseObj) {
         let crypto = responseObj.response.cryptoCurr;
         let curr = responseObj.response.currency;
@@ -84,10 +86,14 @@ module.exports = class CryptoManager {
             })
         })
     }
-    
+
     initResponse(rate, responseObj, res) {
         if (rate === 'Error occured') return res.send(`Something went wrong, try again later`);
         const conversion = responseObj.response.amount * rate;
-        res.send(`Value of ${responseObj.response.cryptoCurr} to ${responseObj.response.currency}: ${conversion}`);
+        responseObj.response.conversion = conversion;
+        console.log(responseObj);
+        //const utils = new Utils();
+        main.utils.replaceLabelContent(responseObj);
+        //        res.send(`Value of ${responseObj.response.cryptoCurr} to ${responseObj.response.currency}: ${conversion}`);
     }
 }
