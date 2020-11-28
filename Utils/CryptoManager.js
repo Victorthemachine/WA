@@ -1,6 +1,6 @@
 const https = require('https');
-const Utils = require('./Utils');
 const main = require('./../index');
+var res = undefined;
 
 module.exports = class CryptoManager {
     async checkServerStatus() {
@@ -44,10 +44,8 @@ module.exports = class CryptoManager {
                 body += chunk;
             })
             res.on('end', () => {
-                console.log(body);
                 try {
                     const json = JSON.parse(body);
-                    console.log()
                     let resRate = 'Error occured';
                     switch (crypto) {
                         case 'bitcoin':
@@ -62,7 +60,6 @@ module.exports = class CryptoManager {
                         default:
                             return 'Error occured';
                     }
-                    console.log(resRate);
                     switch (curr) {
                         case 'CZK':
                             resRate = resRate.czk;
@@ -89,11 +86,22 @@ module.exports = class CryptoManager {
 
     initResponse(rate, responseObj, res) {
         if (rate === 'Error occured') return res.send(`Something went wrong, try again later`);
+        responseObj.response.rate = rate;
         const conversion = responseObj.response.amount * rate;
         responseObj.response.conversion = conversion;
-        console.log(responseObj);
-        //const utils = new Utils();
         main.utils.replaceLabelContent(responseObj);
-        //        res.send(`Value of ${responseObj.response.cryptoCurr} to ${responseObj.response.currency}: ${conversion}`);
     }
+
+    formatDecimals(num, dec) {
+        return Number(num).toFixed(dec);
+    }
+
+    setRes(resp) {
+        res = resp;
+    }
+
+    getRes() {
+        return res;
+    }
+
 }
