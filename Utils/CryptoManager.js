@@ -33,6 +33,9 @@ module.exports = class CryptoManager {
             case 'XMR':
                 crypto = 'monero';
                 break;
+            case 'DGB':
+                crypto = 'digibyte';
+                break;
             default:
                 return 'Error occured';
         }
@@ -46,6 +49,8 @@ module.exports = class CryptoManager {
             res.on('end', () => {
                 try {
                     const json = JSON.parse(body);
+                    console.log(json);
+                    console.log(crypto);
                     let resRate = 'Error occured';
                     switch (crypto) {
                         case 'bitcoin':
@@ -57,9 +62,13 @@ module.exports = class CryptoManager {
                         case 'monero':
                             resRate = json.monero;
                             break;
+                        case 'digibyte':
+                            resRate = json.digibyte;
+                            break;
                         default:
                             return 'Error occured';
                     }
+                    console.log('Parsed :' + resRate);
                     switch (curr) {
                         case 'CZK':
                             resRate = resRate.czk;
@@ -73,6 +82,7 @@ module.exports = class CryptoManager {
                         default:
                             return 'Error occured';
                     }
+                    console.log(resRate);
                     return this.initResponse(resRate, responseObj, resForInit);
                 } catch (err) {
                     console.log(err);
