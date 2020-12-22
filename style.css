@@ -1,0 +1,8 @@
+.center {
+    margin: auto;
+    width: 50%;
+}
+.right {
+    float: right;
+    width: 300px;
+}
