@@ -1,4 +1,0 @@
-# WA
-**CHECK BRANCHES FOR ACTUAL PROJECTS!**
-
-Thank you.
