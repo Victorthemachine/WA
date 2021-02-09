@@ -1,4 +1,2 @@
 # WA
-**CHECK BRANCHES FOR ACTUAL PROJECTS!**
-
-Thank you.
+**There is a video demonstrating the webpage**
