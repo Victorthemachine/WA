@@ -57,11 +57,5 @@ body {
       #4b0082,
       #8b00ff
     );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-size: 400% 400%;
-  
-    -webkit-animation: rainbowanim 10s ease infinite;
-    -moz-animation: rainbowanim 10s ease infinite;
-    animation: rainbowanim 10s ease infinite;
   }
