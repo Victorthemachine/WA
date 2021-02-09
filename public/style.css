@@ -1,0 +1,67 @@
+body {
+    background-image: url("https://media.giphy.com/media/WoKqL8nGDJfFwGzrmR/giphy.gif");
+    color: fuchsia;
+    font-family: 'Courier New', monospace;
+    font-weight: 900;
+    text-align: center;
+  }
+  
+  img {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+  }
+  
+  .contactCard {
+    padding: 24px;
+    margin: 10px;
+    width: 450px;
+    display: inline-block;
+    border: 5px solid olivedrab;
+    border-radius: 5%;
+    background-image: url("https://i.kym-cdn.com/photos/images/original/000/919/384/5ce.jpg");
+  }
+  footer {
+    background: #262626;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    margin-top: 1px;
+    bottom: 0;
+    float: initial;
+  }
+  footer > p {
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+    color: green;
+  }
+  
+  h1 {
+    font-size: 50px;
+    text-decoration: underline;
+  }
+  
+  header {
+    display: inline-block;
+    font-size: 72px;
+    width: 100%;
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7f00,
+      #ffff00,
+      #00ff00,
+      #0000ff,
+      #4b0082,
+      #8b00ff
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400% 400%;
+  
+    -webkit-animation: rainbowanim 10s ease infinite;
+    -moz-animation: rainbowanim 10s ease infinite;
+    animation: rainbowanim 10s ease infinite;
+  }

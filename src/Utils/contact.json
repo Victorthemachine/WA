@@ -1,0 +1,28 @@
+{
+    "contacts": [
+        {
+            "name": "Big PP General",
+            "img": "https://i.redd.it/2oinkbwsub051.jpg",
+            "email": "iLikeEatingCrayons69@gmail.com",
+            "tel": "788 542 126"
+        },
+        {
+            "name": "Kyu Sugardust",
+            "img": "https://pbs.twimg.com/profile_images/806975567778185217/hNBDSDde_400x400.jpg",
+            "email": "huniepot@skygarden.noice",
+            "tel": "*** 420 666"
+        },
+        {
+            "name": "Edgiest Edgelord",
+            "img": "https://otakuusamagazine.com/wp-content/uploads/2020/10/redo-of-healer-header.jpg",
+            "email": "iEatEdgeForBreakfast@edge.lord",
+            "tel": "+420 777 777 777"
+        },
+        {
+            "name": "Boi that really likes em Fours",
+            "img": "https://i.redd.it/277w9fqi2nfz.jpg",
+            "email": "ifYouAreFourOrFourtyFourHMU@fourtastic.uwu",
+            "tel": "+420 444 444 444"
+        }
+    ]
+}
