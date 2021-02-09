@@ -1,5 +1,4 @@
 import React from "react";
-import { InferencePriority } from "typescript";
 import Card from "./Card";
 const contactArray = require("./../Utils/contact.json");
 
