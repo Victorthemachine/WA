@@ -1,4 +1,6 @@
 # WA
-**CHECK BRANCHES FOR ACTUAL PROJECTS!**
+~~**CHECK BRANCHES FOR ACTUAL PROJECTS!**~~
 
-Thank you.
+~~Thank you.~~
+
+old homework ignore
